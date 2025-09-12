@@ -1,27 +1,19 @@
 # Haskell Course
 
-[Versión en 🇪🇸 traducida por la comunidad](https://github.com/input-output-hk/haskell-course/tree/main/ES-translation)
-
 > *The easiest way to learn Haskell* - R.M.
 
-**This course is designed to teach non-engineers (e.g., self-taught/bootcamp coders) Haskell from zero to productive in an interactive, easy-to-follow way.** The course doesn't contain content specific to Marlowe or Plutus, but it will cover all the Haskell you'll needed to work with them.
+**This course is designed to teach non-engineers (e.g., self-taught/bootcamp coders) Haskell from zero to productive in an interactive, easy-to-follow way.** The course doesn't contain content specific to [Plinth](https://plutus.cardano.intersectmbo.org/docs/), but it will cover all the Haskell you'll needed to start using it.
 
 For a more detailed explanation, keep reading or watch the introduction video:
 [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://youtu.be/H1vbUKMKvnM)
 
-## How much should I study if I only wish to use Marlowe/Plutus?
-
-In the [outline](#what-well-cover) below, there are clear stopping points (for both Marlowe and Plutus) where we deem you to know enough Haskell to effectively use the technology.
-
 ## How to read/watch the lessons
 
-To go through the **interactive lessons**, go to your chosen lesson's outline inside "[What we'll cover](#what-well-cover)" and click on the button that looks like the one below. If the page loads with a "500: Internal Server Error" just refresh it, and it should be fine. At the top, you will see a console that displays the progress of preparing your interactive lesson. During this time, you can scroll down and look at the lesson, that is displayed non-interactively.
+To go through the **interactive lessons**, go to your chosen lesson's outline inside "[What we'll cover](#what-well-cover)" and click on the button that looks like this: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course/HEAD?labpath=%2Flessons%2F01-Introduction-to-haskell.ipynb). At the top, you will see a console that displays the progress of preparing your interactive lesson. During this time, you can scroll down and look at the lesson, that is displayed non-interactively.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course/HEAD?labpath=%2Flessons%2F01-Introduction-to-haskell.ipynb)
+> NOTE: If the page loads with a "500: Internal Server Error" just refresh it, and it should be fine.
 
-And to see the **video lessons**, click on the button that looks like this:
-
-[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://youtu.be/H1vbUKMKvnM)
+And to see the **video lessons**, click on the button that looks like this: [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://youtu.be/H1vbUKMKvnM)
 
 ## To do the homework
 
@@ -57,19 +49,13 @@ Everything else can be safely ignored
 
 [FAQ](FAQ.md)
 
-## Proposed changes for next iteration/version
-
-[Changes](Changes.md)
-
 ## What we'll cover
-
-**This is a tentative outline. Changes can (and will) be made as we advance with the course and gather feedback from students.**
 
 **If there are no buttons on a lesson, it means that it's not published yet.**
 
 ---
 
-### BEGINNER SECTION - GETTING STARTED WITH HASKELL - 🥚⟶🐣
+### GETTING STARTED WITH HASKELL - 🥚⟶🐣
 In this section, we get familiar with basic concepts and Haskell syntax.
 
 ---
@@ -222,7 +208,7 @@ In this section, we get familiar with basic concepts and Haskell syntax.
 
 ---
 
-### BEGINNER SECTION - GAINING INDEPENDENCE - 🐣⟶🐥
+### GAINING INDEPENDENCE - 🐣⟶🐥
 In this section, we learn about Haskell tooling and the necessary concepts to start working on our own projects.
 
 ---
@@ -282,7 +268,7 @@ In this section, we learn about Haskell tooling and the necessary concepts to st
 
 ---
 
-### BEGINNER SECTION - BASIC ABSTRACTIONS & EFFECTS - 🐥⟶🐓
+### BASIC ABSTRACTIONS & EFFECTS - 🐥⟶🐓
 In this section, we learn about a few of the most useful and talked about Abstractions in Haskell and how we deal with effects in general (not only `IO`).
 
 ---
@@ -351,9 +337,15 @@ In this section, we learn about a few of the most useful and talked about Abstra
     - Extracting the pattern
     - Using the `State` Monad
 
-### 22. Final project
+### 22. Final project [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=zqaqxEGaqrc&list=PLNEK_Ejlx3x1D9Vq5kqeC3ZDEP7in4dqb&index=22)
 
-- TODO
+In this project, we'll build a CLI that converts Markdown files into HTML files. We're going to learn about:
+- The `text` library
+- How to build a CLI using `optparse-applicative`
+- How to parse text using `megaparsec` and combinators
+- How to generate HTML from a Markdown AST
+
+Ideally, you'll see the video without taking notes, and then try to implement the whole thing referencing only the libraries' documentation. Have fun!! 😃
 
 ---
 
@@ -366,14 +358,13 @@ Thank you for going on this journey with me! Please feel free to give us feedbac
 
 It depends on your preferences. You could:
 
-- If you're interested in Cardano, explore Marlowe, Plutus, Atlas, CardanoAPI, and other Cardano-related tools and libraries.
-- Start your own project and learn what you need on the way (e.g., a server, a compiler, a full-stack app using IHP)
-- Read Haskell books and sources that go into more advanced subjects. See recommended resources here.
+- If you're interested in Cardano, explore [Plinth](https://plutus.cardano.intersectmbo.org/docs/), [Atlas](https://atlas-app.io/), and other Cardano-related tools and libraries.
+- Start your own project and learn what you need on the way (e.g., a server, a compiler, a full-stack app using [IHP](https://ihp.digitallyinduced.com/))
+- Read Haskell books and sources that go into more advanced subjects. See [recommended resources here](https://www.haskell.org/documentation/).
 - Learn about specific subjects, for example (organized roughly by difficulty):
   1. Explore the `base` library and understand all types and type classes.
   1. Learn about Testing (unit vs property testing and QuickCheck).
   1. Explore how to deal with Concurrency and Parallelism.
-  1. Learn about Parsers (Parser combinators, `Alternative` type class, `MonadPlus`, Parsec library).
   1. Learn how Haskell deals with data structures under the Hood.
   1. Monad Transformers and Free monads.
   1. Generic programming.

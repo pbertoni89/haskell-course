@@ -5,9 +5,15 @@ gitDir="$(dirname "${BASH_SOURCE[0]}")"
 
 set -x
 
-docker run -it --rm \
-	-v ${gitDir}:/home/jovyan/git -p 8888:8888 \
+containerId=$(docker run -it -d --rm \
+	-v "${gitDir}":/home/jovyan/git -p 8888:8888 \
 	pbertoni/haskell:latest \
-	jupyter lab --ip=0.0.0.0 --no-browser
+	jupyter lab --ip=0.0.0.0 --no-browser)
+
+sleep 5
+
+set -x
+docker logs "${containerId}" | tail -1 | tee "${gitDir}"/url.txt
+set +x
 
 { set +x; } 2> /dev/null

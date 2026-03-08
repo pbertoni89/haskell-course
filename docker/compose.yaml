@@ -1,0 +1,10 @@
+
+services:
+  jupyter:
+    image: pbertoni/haskell:latest
+    ports:
+      - "8888:8888"
+    volumes:
+      - ../:/home/jovyan/git
+    command: jupyter lab --ip=0.0.0.0 --no-browser
+    restart: "always"

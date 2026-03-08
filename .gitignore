@@ -32,5 +32,5 @@ scripts
 .DS_Store
 
 # PB
-url.txt
+docker/url.txt
 .idea/
